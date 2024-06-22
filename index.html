@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>毕业快乐</title>
+	<script>
+	// 网站建立时间
+	const siteLaunchDate = new Date('2024-06-08T17:00:00');
+	function updateSiteUptime() {
+	  const currentDate = new Date();
+	  const uptime = currentDate - siteLaunchDate;
+	  const seconds = Math.floor((uptime / 1000) % 60);
+	  const minutes = Math.floor((uptime / (1000 * 60)) % 60);
+	  const hours = Math.floor((uptime / (1000 * 60 * 60)) % 24);
+	  const days = Math.floor(uptime / (1000 * 60 * 60 * 24));
+	  
+	  document.getElementById('uptime').innerHTML =
+	    days + '天' + hours + '小时'
+	    + minutes + '分钟' + seconds + '秒';
+	}
+	setInterval(updateSiteUptime, 1000); // 每秒更新一次
+	</script>
+</head>
+<body>
+    <span class="top"></span>
+    <div class="box">
+        <div class="nav_main">
+            <span class="logo">Happy graduation<span class="y">.</span></span>
+           <!-- <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Honor</a></li>
+                    <li><a href="#">souvenir</a></li>
+                    <li><a href="#">Introduce</a></li>
+                    <li><a href="#">About</a></li>
+                </ul> 
+            </div> -->
+        </div>
+        <div class="centen">
+            <span>First</span>
+            <span>One Day</span>
+			<p>
+				毕业啦！
+				<br />
+                It's graduation! 
+                <br />
+				一段旅程的结束，也是另一段旅程的开始。
+				<br />
+                The end of one journey is also the beginning of another.
+				<br />
+				愿我们的人生充满阳光和希望！
+				<br />
+				 May our life be full of sunshine and hope!
+            </p>
+            <div >
+				<div style="color: #ff5500;
+							padding: 5% 0 0 10% ;
+							display: flex;
+							flex-direction: column;
+							padding: 0 0 0 5px;
+							margin: 0 0 30px 0;
+							font-weight: bold;
+							font-size: 25px;
+							text-shadow: 2px 2px 5px rgba(15, 8, 0, 0.178);">
+					 我们已经毕业：
+					<strong id="uptime"></strong>(*๓´╰╯`๓)
+				</div>
+				<a href="#">Good Bye</a>
+            </div>
+        </div>
+    </div>
+	<div id="footer">
+	    <p>© 2024 | <a href="https://nz.nzyc.top/" target="_blank">Ayl_NZ</a></p>
+	</div>
+</body>
+</html>

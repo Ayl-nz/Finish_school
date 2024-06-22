@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+.body{
+    background-color: rgb(206, 128, 25);
+}
+.top {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: rotateZ(90deg) translateX(-50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 20px rgb(0, 93, 168);
+}
+.box{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 导航栏 */
+.nav_main{
+    height: 90px;
+    background-color: rgba(248, 248, 248, 0.747);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -1px 2px 20px #ccc;
+}
+.logo {
+    font-size: 40px;
+    font-family: '微软雅黑';
+    font-weight: bold;
+    transition: .5s;
+    color: rgb(26, 15, 0);
+
+}
+.logo:hover{
+    cursor: pointer;
+    color: rgb(233, 132, 0);
+}
+.logo span{
+    color: rgb(254,142,0);
+}
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.nav ul li {
+    margin: 0 30px;
+    /* background-color: rgb(170, 170, 170); */
+}
+.nav ul li a {
+    padding: 10px;
+    font-weight: bold;
+    transition: .5s;
+    color: rgb(26, 15, 0);
+    text-decoration: none;
+    text-shadow: 1px 1px 5px rgba(248, 248, 248, 0.747);
+    border-bottom: 3px solid rgba(248, 248, 248, 0);
+    /* background-color: aqua; */
+}
+.nav ul li a:hover{
+    cursor: pointer;
+    color: rgb(231, 132, 1);
+    text-shadow: 1px 1px 40px rgba(255, 194, 114, 0.747);
+    border-bottom: 3px solid rgba(231, 132, 1, 0.747);
+
+}
+
+.centen {
+    padding: 5% 0 0 10% ;
+    display: flex;
+    flex-direction: column;
+}
+.centen span:nth-child(1){
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(255, 164, 89);
+    text-shadow: 2px 5px 5px rgb(71, 36, 0);
+
+}
+.centen span:nth-child(2){
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(255, 252, 250);
+    text-shadow: 2px 5px 5px rgb(10, 5, 0);
+
+}
+.centen p {
+    padding: 0 0 0 5px;
+    margin: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(75, 75, 75);
+    text-shadow: 2px 2px 5px rgba(15, 8, 0, 0.178);
+
+}
+.centen div a {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+    text-decoration: none;
+    color: #ff5500;
+}
+#footer {
+    width: 100%;
+    color: white;
+    float: left;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 30px;
+    /* background-color: blue; */
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a:hover {
+    color: rgb(0, 81, 255);
+}
+/* 自适应 */
+@media screen and (max-width: 1250px) {
+    #box {
+        width: 100%;
+    }
+
+    .meBox {
+        margin-left: 3%;
+    }
+
+    .meBox:hover {
+        width: 21rem;
+        height: 26rem;
+        margin: 95px 0 0 2.5%;
+    }
+
+    #cmdBox {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .meBox {
+        float: none;
+        margin: 100px auto 100px;
+    }
+
+    .meBox:hover {
+        width: 20rem;
+        height: 25rem;
+        margin: 105px auto 100px;
+    }
+
+    .meBox:hover .meBox-Button a {
+        width: 158px;
+        height: 50px;
+        margin-top: 13px;
+    }
+
+    .meBox:hover .meBox-title p {
+        font-size: 1.2rem;
+    }
+
+    .meBox:hover .headPhoto {
+        width: 8rem;
+        height: 8rem;
+        margin: -0.5rem 0 0 -4rem;
+        transform: rotate(360deg);
+    }
+
+    #cmdBox {
+        float: none;
+        margin: 0 auto 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .meBox {
+        width: 300px;
+    }
+
+    .meBox:hover {
+        width: 300px;
+        height: 25rem;
+        margin: 100px auto 100px;
+    }
+
+    .meBox-Button a:hover {
+        color: rgb(0, 132, 255);
+    }
+
+    .meBox:hover .meBox-Button a {
+        width: 150px;
+        margin-top: 13px;
+    }
+
+    .meBox:hover .meBox-title p {
+        font-size: 1.2rem;
+    }
+
+    .meBox:hover .headPhoto {
+        width: 8rem;
+        height: 8rem;
+        margin: -0.5rem 0 0 -4rem;
+        transform: rotate(360deg);
+    }
+
+    .meBox:hover .meBox-text {
+        font-size: 1rem;
+    }
+
+    .meBox-Button a {
+        width: 150px;
+    }
+
+    #cmdBox {
+        width: 100%;
+        height: 850px;
+    }
+
+    .cmd {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cmd2 {
+        position: relative;
+        top: 20px;
+        left: 0;
+    }
+
+    .cmd:hover {
+        width: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+        z-index: 1;
+    }
+}
